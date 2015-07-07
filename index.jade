@@ -1,0 +1,18 @@
+//- ---
+//- layout: default
+//- ---
+html
+	body
+		.home
+			h1.page-heading Posts
+			ul.post-list
+				li some
+				//- for post in site.posts
+					li
+						span.post-meta {{ post.date | date: &quot;%b %-d, %Y&quot; }}
+						h2
+							a.post-link(href='{{ post.url | prepend: site.baseurl }}') {{ post.title }}
+
+			p.rss-subscribe
+				| Subscribe 
+				a(href='{{ ', |='', prepend:='', site.baseurl='') via RSS
